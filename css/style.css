@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-brown: #707070;
+    --primary: #6DB3F9;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-brown);
+}
+
+.container{
+    width: 800px;
+    margin: 100px auto;
+    height: 50vh;
+}
+
+.output{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-container{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.brand-name{
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.result{
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+}
+
+.divider{
+    background-color: var(--text-brown);
+    height: 4px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.calculation-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-container, .from-container, .to-container{
+    width: 170px;
+    height: 100%;
+}
+
+label{
+    font-size: 24px;
+    color: var(--text-brown);
+}
+
+.input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(94, 88, 88);
+    margin-top: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(110, 96, 96);
+    text-align: right;
+}
+.from{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(110, 96, 96);
+    padding-left: 7px;
+}
+.to{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    color: rgb(110, 96, 96);
+    padding-left: 7px;
+}
+.input:focus, .from:focus, .to:focus{
+    outline: none;
+}
+
+.btn-container{
+    width: 210px;
+    height: 80px;
+}
+
+.btn-container button{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary);
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s all;
+}
+.btn-container button:active{
+    background-color: #74abe2;
+}
+.btn-container button:focus{
+    outline: none;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    
+}
+
+.history-container{
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.history-list{
+    width: 100%;
+}
+.history-list td, .history-list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.history-list tr:nth-child(odd){background-color: #f2f2f2;}
+
+.history-list tr:hover {background-color: #ddd;}
+
+.history-list tr:first-child{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--primary);
+  color: white;
+}
+.history-list th:last-child{
+    text-align: right;
+    padding-right: 15px;
+}
+.history-list tr td:last-child{
+    text-align: right;
+    padding-right: 15px;
+}
+.rowPlaceHolder td{
+    text-align: center !important;
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+        width: 100%;
+        padding: 0 10px;
+        margin: 30px auto;
+    }
+    .output{
+        flex-flow: column;
+        align-items: flex-end;
+    }
+    .brand-container{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    /**************************/
+    .calculation-container{
+        flex-wrap: wrap;
+    }
+    .input-container{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .from-container{
+        margin-bottom: 15px;
+        width: 45%;
+    }
+    .to-container{
+        margin-bottom: 20px;
+        width: 45%;
+    }
+    .btn-container{
+        width: 100%;
+    }
+    .history-list{
+        font-size: 11px;
+    }
+}
